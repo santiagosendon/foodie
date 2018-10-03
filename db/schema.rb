@@ -20,41 +20,28 @@ ActiveRecord::Schema.define(version: 2018_10_01_194931) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "order_items", force: :cascade do |t|
-    t.integer "menu_item_id"
-    t.integer "order_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.integer "phone_number"
     t.string "address"
-    t.string "review"
+    t.integer "review_id"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "order_id"
-    t.integer "rating"
-    t.string "description"
+    t.integer "user_id"
+    t.integer "restaurant_id"
+    t.string "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "log_in_info"
-    t.integer "address"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "log_in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
