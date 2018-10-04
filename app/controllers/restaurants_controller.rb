@@ -6,15 +6,10 @@ class RestaurantsController < ApplicationController
 
     def show
      @restaurant = Restaurant.includes(:menu_items).find(params[:id])
+     # @restaurant = Restaurant.find(params[:id])
      @all_menus = MenuItem.all
+     render :'restaurants/show.html.erb'
    end
 
-
-def new
-
-end
-
-def create
-end
 
 end

@@ -5,9 +5,9 @@
 
 
 <h2> Restaurants Menu </h2>
-<%= @restaurant.menu_items do |menu| %>
-  <li> <%=link_to menu_item.menu %> </li>
-  <li> <%= menu_item.price.all %> </li>
+<% @restaurant.menu_items do |name| %>
+  <li> <%= name.name %> </li>
+  <li> <%= menu.price %> </li>
   <%end%>
 
 
@@ -18,7 +18,7 @@
 <%= form_for Review.new  do |form| %>
  <%= form.hidden_field :restaurant_id, value: @restaurant.id %>
    <%= form.label :review %>
-    <%= form.text_field :review %>
+    <%= form.text_area :review %>
 
    <%= form.submit %>
    <%end%>

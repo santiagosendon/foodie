@@ -1,7 +1,7 @@
 <ol>
-<% @menuitems.each do |menu| %>
+<% @menuitems.each do |name| %>
   <li>
-    <%= link_to menu.menu, menu %>
+    <%= link_to name.name, menu %>
   </li>
 <% end %>
 </ol>
