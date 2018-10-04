@@ -5,14 +5,16 @@ class RestaurantsController < ApplicationController
    end
 
     def show
-     @restaurant = Restaurant.find(params[:id])
+     @restaurant = Restaurant.includes(:menu_items).find(params[:id])
+     @all_menus = MenuItem.all
    end
 
 
+def new
 
+end
 
-
-
-
+def create
+end
 
 end

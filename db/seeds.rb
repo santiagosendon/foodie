@@ -17,8 +17,8 @@ require 'faker'
       description: Faker::Restaurant.description,   #=> "We are committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat."
       )
 
-      mi = MenuItem.create(restaurant_id: restaurant.id,menu:'Cesar Salad',price: 8.00)
-      byebug
+      mi = MenuItem.create(restaurant_id: restaurant.id,menu:'Caesar Salad',price: 8.00)
+
       MenuItem.create(restaurant_id: restaurant.id,menu:'Crab Cakes',price: 9.00)
       MenuItem.create(restaurant_id: restaurant.id,menu:'Carmelized Onion Dip',price: 8.00)
       MenuItem.create(restaurant_id: restaurant.id,menu:'Fried Squid',price: 8.00)

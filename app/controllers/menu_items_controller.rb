@@ -7,8 +7,8 @@ class MenuItemsController < ApplicationController
 
   def show
     @menuitem = MenuItem.find(params[:id])
+    redirect_to @menuitem.restaurant
   end
-
 
 
 
